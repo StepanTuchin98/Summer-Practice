@@ -6,11 +6,6 @@ pipeline {
                 cleanWs()
             }
         }
-        stage("git") {
-            steps {
-                bat "git clone https://github.com/StepanTuchin98/Summer-Practice.git"
-            }
-        }
         stage("run") {
             steps {
             bat """
