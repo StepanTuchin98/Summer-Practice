@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+        stage("clean") {
+            steps {
+                cleanWs()
+            }
+        }
+        stage("git") {
+            steps {
+                bat "git clone https://github.com/StepanTuchin98/Summer-Practice.git"
+            }
+        }
+        stage("run") {
+            steps {
+            bat """
+                cd C:\\Program Files (x86)\\Jenkins\\workspace\\pipeline\\Summer-Practice
+                mvn clean test -Dgroups=BETestsGroup -Dui.address=https://www.citilink.ru/ -Dselenide.browser=chrome -Dserver.address=http://dummy.restapiexample.com/ -Dselenide.baseUrl=http://localhost:8081/
+            """
+            }
+        }
+    }
+}
