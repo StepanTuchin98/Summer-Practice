@@ -28,7 +28,7 @@
         <assertj-core.version>3.9.0</assertj-core.version>
         <json-schema-java7.version>1.4.1</json-schema-java7.version>
         <selenide.version>5.2.8</selenide.version>
-        <commons-io.version>2.5</commons-io.version>
+        <commons-io.version>2.7</commons-io.version>
         <guava.version>24.1.1-jre</guava.version>
         <httpcore.version>4.4.8</httpcore.version>
         <lombok.version>1.16.20</lombok.version>
